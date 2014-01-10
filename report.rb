@@ -14,7 +14,6 @@ class Report
     end 
 
     def output_start
-        raise 'Called abstract method: output_start'
     end
 
     def output_head
@@ -22,7 +21,6 @@ class Report
     end
     
     def output_body_start
-        raise 'Called abstract method: output_start'
     end
     
     def output_line line
@@ -36,33 +34,19 @@ class Report
     end
 
     def output_body_end
-        raise 'Called abstract method: output_start'
     end
 
     def output_end
-        raise 'Called abstract method: output_start'
     end
 end
 
 class PlainTextReport < Report
-    def output_start
-    end
-
     def output_head
         puts "*** #{@title} ***"
     end
-    
-    def output_body_start
-    end 
 
     def output_line line
         puts line
-    end
-
-    def output_body_end
-    end
-
-    def output_end
     end
 end
 
